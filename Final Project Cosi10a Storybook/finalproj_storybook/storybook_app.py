@@ -69,9 +69,12 @@ def intro_story():
     welcome(name)
     print('Pretty cool, right? This is called ASCII art, and this is how we are going to tell stories!')
 
-# /\ /\
-#((ovo))
-#():::()
- # VVV
+def owl_story():
+    print("Ollie the Owl's Big Adventure")
+    ready = input('Shall we begin?')
+    if ready == 'yes' or ready == 'Yes' or ready == 'Y':
+        print("Meet Ollie the Owl!")
+        print('  /\ /\ \n ((ovo)) \n ():::() \n   VVV')
 
 intro_story()
+owl_story()
