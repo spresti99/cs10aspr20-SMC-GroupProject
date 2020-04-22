@@ -76,5 +76,6 @@ def owl_story():
         print("Meet Ollie the Owl!")
         print('  /\ /\ \n ((ovo)) \n ():::() \n   VVV')
 
-intro_story()
-owl_story()
+if __name__ == "__main__":
+    intro_story()
+    owl_story()
