@@ -25,6 +25,11 @@ def story2():
 def story3():
     return render_template('story3.html')
 
+@app.route('/about_authors')
+def about_authors():
+	""" generates a bio page with links and images """
+	return render_template('about_authors.html')
+
 @app.route('/miranda')
 def miranda():
 	""" generates a bio page with links and images """
