@@ -79,3 +79,42 @@ def owl_story():
 if __name__ == "__main__":
     intro_story()
     owl_story()
+
+
+def story2_conditions(choice):
+    x = choice
+    conditions = {}
+    storytext = "Hello, my name is Flippers! Today is going to be a great day. What should I do first?"
+    question = "Enter: go swimming or go fishing or get dressed"
+    pictureUrl = "https://i.imgur.com/acuLNws.jpg"
+    conditions.update( {'storytext': storytext} )
+    conditions.update( {'question': question} )
+    conditions.update( {'pictureUrl': pictureUrl} )
+    return conditions
+    #choice = input(question)
+
+#    while True:
+#        if choice == "get dressed":
+#            storytext = "Okay, lets pick out a color hat to wear"
+#            question = "Enter: black or blue or red"
+#            #pictureUrl="https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+#            pictureUrl = "https://i.imgur.com/acuLNws.jpg"
+#            color_hat(question)
+#            break
+
+#def color_hat(question):
+#    choice = input(question)
+#    if choice == "blue":
+#        pictureUrl="https://i.imgur.com/TcaBpZU.jpg"
+#    if choice == "black":
+#        pictureUrl="https://i.imgur.com/jbZazrq.jpg"
+#    if choice == "red":
+#        pictureUrl="https://i.imgur.com/6fBKoYg.jpg"
+
+#conditions = story2_conditions(choice)
+def get_storytext(conditions):
+    return conditions['storytext']
+def get_question(conditions):
+    return conditions['question']
+def get_pictureUrl(conditions):
+    return conditions['pictureUrl']

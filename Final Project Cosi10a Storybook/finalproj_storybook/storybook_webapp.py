@@ -11,7 +11,7 @@ global state
 state = {'message':'',}
 
 state = {'message':'',
-		 'choice':''
+		 'choice':'',
 		 }
 
 @app.route('/')
@@ -93,13 +93,29 @@ def welcome(name):
 
 @app.route('/story2')
 def story2():
-	question = "question"
-	storytext="text for story 2"
+#	global state
+		#if request.method == 'GET':
+			#return welcome()
+
+#	if request.method == 'POST':
+#		choice = request.form['choice']
+	choice = "y"
+	c = storybook_app.story2_conditions(choice)
+	storytext = storybook_app.get_storytext(c)
+	question = storybook_app.get_question(c)
+	pictureUrl = storybook_app.get_pictureUrl(c)
 	pictureWidth=600
 	pictureheight=400
-	pictureUrl="https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-
 	return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, pwidth=pictureWidth, pheight=pictureheight, question=question)
+
+
+	#question = "question"
+	#storytext="text for story 2"
+	#pictureWidth=600
+	#pictureheight=400
+	#pictureUrl="https://i.imgur.com/acuLNws.jpg"
+
+	#return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, pwidth=pictureWidth, pheight=pictureheight, question=question)
 
 @app.route('/story3')
 def story3():
