@@ -99,7 +99,7 @@ def story2start():
 	pictureheight=400
 	return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, pwidth=pictureWidth, pheight=pictureheight, question=question)
 
-@app.route('/story2')
+@app.route('/story2', methods=['GET','POST'])
 def story2():
 	if request.method == 'GET':
 		return story2start()
