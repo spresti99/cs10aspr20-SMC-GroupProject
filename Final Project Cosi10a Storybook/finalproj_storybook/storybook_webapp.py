@@ -8,7 +8,11 @@ import storybook_app
 app = Flask(__name__)
 
 global state
-state = {'message':''}
+state = {'message':'',}
+
+state = {'message':'',
+		 'choice':''
+		 }
 
 @app.route('/')
 @app.route('/main')
@@ -89,12 +93,13 @@ def welcome(name):
 
 @app.route('/story2')
 def story2():
-	story2page="text for story 2 lonasdjfwejfahs dfjaweufh akdjfaowehfa kdhfaw euhf alkdj faw efh; oaiwhfkslds akdjf;n vjbajc bdahuf"
+	question = "question"
+	storytext="text for story 2"
 	pictureWidth=600
-	pictureheight=300
+	pictureheight=400
 	pictureUrl="https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-	# pictureUrl="https://i.imgur.com/IMQTZpR.jpg"
-	return render_template("story2.html", storytext=story2page, picUrl=pictureUrl, pwidth=pictureWidth, pheight=pictureheight)
+
+	return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, pwidth=pictureWidth, pheight=pictureheight, question=question)
 
 @app.route('/story3')
 def story3():
