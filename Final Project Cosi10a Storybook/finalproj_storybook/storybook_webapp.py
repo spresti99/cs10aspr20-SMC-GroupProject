@@ -89,7 +89,12 @@ def welcome(name):
 
 @app.route('/story2')
 def story2():
-	return render_template('story2.html')
+	story2page="text for story 2 lonasdjfwejfahs dfjaweufh akdjfaowehfa kdhfaw euhf alkdj faw efh; oaiwhfkslds akdjf;n vjbajc bdahuf"
+	pictureWidth=600
+	pictureheight=300
+	pictureUrl="https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+	# pictureUrl="https://i.imgur.com/IMQTZpR.jpg"
+	return render_template("story2.html", storytext=story2page, picUrl=pictureUrl, pwidth=pictureWidth, pheight=pictureheight)
 
 @app.route('/story3')
 def story3():
