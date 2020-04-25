@@ -8,7 +8,6 @@ import storybook_app
 app = Flask(__name__)
 
 global state
-state = {'message':'',}
 
 state = {'message':'',
 		 'choice':'',
@@ -91,31 +90,31 @@ def welcome(name):
 		if newName[y] == 'z' or newName[y] == 'Z':
 			state['message']+=('\n\n _______ \n|       |\n|____   |\n ____|  |\n| ______|\n| |_____ \n|_______|')
 
-@app.route('/story2')
-def story2():
-#	global state
-		#if request.method == 'GET':
-			#return welcome()
-
-#	if request.method == 'POST':
-#		choice = request.form['choice']
-	choice = "y"
-	c = storybook_app.story2_conditions(choice)
-	storytext = storybook_app.get_storytext(c)
-	question = storybook_app.get_question(c)
-	pictureUrl = storybook_app.get_pictureUrl(c)
+@app.route('/story2start')
+def story2start():
+	storytext = "Hello, my name is Flippers! Today is going to be a great day. What should I do first?"
+	question = "Enter: go swimming or go fishing or get dressed"
+	pictureUrl = "https://i.imgur.com/acuLNws.jpg"
 	pictureWidth=600
 	pictureheight=400
 	return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, pwidth=pictureWidth, pheight=pictureheight, question=question)
 
+@app.route('/story2')
+def story2():
+	if request.method == 'GET':
+		return story2start()
 
-	#question = "question"
-	#storytext="text for story 2"
-	#pictureWidth=600
-	#pictureheight=400
-	#pictureUrl="https://i.imgur.com/acuLNws.jpg"
+	elif request.method == 'POST':
+		return story2start()
+#		choice = request.form['choice']
+#		c = storybook_app.story2_conditions(choice)
+#		storytext = storybook_app.get_storytext(c)
+#		question = storybook_app.get_question(c)
+#		pictureUrl = storybook_app.get_pictureUrl(c)
+#		return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, pwidth=pictureWidth, pheight=pictureheight, question=question)
 
-	#return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, pwidth=pictureWidth, pheight=pictureheight, question=question)
+
+
 
 @app.route('/story3')
 def story3():

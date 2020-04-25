@@ -81,6 +81,7 @@ if __name__ == "__main__":
     owl_story()
 
 
+#the function story2_conditions returns a dictionary of the variables that will be passed to story2.html
 def story2_conditions(choice):
     x = choice
     conditions = {}
@@ -95,7 +96,7 @@ def story2_conditions(choice):
 
 #    while True:
 #        if choice == "get dressed":
-#            storytext = "Okay, lets pick out a color hat to wear"
+#            storytext = "Okay, time to get dressed. Let's pick out a color hat to wear"
 #            question = "Enter: black or blue or red"
 #            #pictureUrl="https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
 #            pictureUrl = "https://i.imgur.com/acuLNws.jpg"
@@ -112,6 +113,9 @@ def story2_conditions(choice):
 #        pictureUrl="https://i.imgur.com/6fBKoYg.jpg"
 
 #conditions = story2_conditions(choice)
+
+
+#the get functions below return the string for each of the variables that will be passed to story2.html
 def get_storytext(conditions):
     return conditions['storytext']
 def get_question(conditions):
