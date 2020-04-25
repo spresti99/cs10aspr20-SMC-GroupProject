@@ -95,9 +95,7 @@ def story2start():
 	storytext = "Hello, my name is Flippers! Today is going to be a great day. What should I do first?"
 	question = "Enter: go swimming or go fishing or get dressed"
 	pictureUrl = "https://i.imgur.com/acuLNws.jpg"
-	pictureWidth=600
-	pictureheight=400
-	return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, pwidth=pictureWidth, pheight=pictureheight, question=question)
+	return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question)
 
 @app.route('/story2', methods=['GET','POST'])
 def story2():
@@ -105,13 +103,16 @@ def story2():
 		return story2start()
 
 	elif request.method == 'POST':
-		return story2start()
-#		choice = request.form['choice']
+		choice = request.form['choice']
+		storytext = "Okay, time to get dressed. Let's pick out a color hat to wear"
+		question = "Enter: black or blue or red"
+		pictureUrl = "https://i.imgur.com/acuLNws.jpg"
+
 #		c = storybook_app.story2_conditions(choice)
 #		storytext = storybook_app.get_storytext(c)
 #		question = storybook_app.get_question(c)
 #		pictureUrl = storybook_app.get_pictureUrl(c)
-#		return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, pwidth=pictureWidth, pheight=pictureheight, question=question)
+		return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question)
 
 
 
