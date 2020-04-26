@@ -117,12 +117,12 @@ def story2_conditions(choices):
 		elif choices[0] == "go fishing" and choices[1] == "ready":
 			storytext = "I hope to catch a big fish today. Tell me when you are ready to cast the line"
 			question = "Enter: ready"
-			pictureUrl = "https://i.imgur.com/OBjJmAT.jpg"
+			pictureUrl = "https://i.imgur.com/aFscZZG.jpg"
 
-		elif choice[0] == "go swimming" and choice[1]==jump:
+		elif choices[0] == "go swimming" and choices[1]=="jump":
 			storytext = "SPLASH! Now we can explore underwater. Which friend do you want to visit? Willy the Whale, Fiona the Fish, or Connor the Crab"
 			question = "Enter: Willy or Fiona or Connor"
-			pictureUrl = "https://i.imgur.com/OBjJmAT.jpg"
+			pictureUrl = "https://i.imgur.com/8cjaMgB.jpg"
 
 	if len(choices)==3:
 		if choices[0]=="get dressed" and choices[1] == "blue" and choices[2]=="start fishing":
