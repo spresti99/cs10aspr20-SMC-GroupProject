@@ -96,7 +96,10 @@ def story2start():
 	question = "Enter: go swimming or go fishing or get dressed"
 	pictureUrl = "https://i.imgur.com/acuLNws.jpg"
 	state['story2_choices'] = []
-	return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question, opt1="go swimming", opt2="go fishing", opt3="get dressed", page1Display="display:none")
+	return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question, opt1="go swimming", opt2="go fishing", opt3="get dressed",
+	options3Display="display:inline",
+	options2Display="display:none",
+	options1Display="display:none")
 
 @app.route('/story2', methods=['GET','POST'])
 def story2():
@@ -109,18 +112,35 @@ def story2():
 		userChoice = request.form['story2Option']
 		state['story2_choices'].append(userChoice)
 		c = storybook_app.story2_conditions(state['story2_choices'])
-		storytext = storybook_app.get_storytext(c)
+#		storytext = storybook_app.get_storytext(c)
 		question = storybook_app.get_question(c)
 		pictureUrl = storybook_app.get_pictureUrl(c)
-#		storytext = c
+		storytext = state['story2_choices']
 #		question = "why"
 #		pictureUrl = "https://i.imgur.com/qIEmd9Q.jpg"
-		opt1 = storybook_app.get_opt1(c)
-		opt2 = storybook_app.get_opt2(c)
-		opt3 = storybook_app.get_opt3(c)
-		page1Display = "display:none"
 
-		return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question, opt1=opt1, opt2=opt2, opt3=opt3, page1Display=page1Display)
+		options3Display = storybook_app.get_options3Display(c)
+		options2Display = storybook_app.get_options2Display(c)
+		options1Display = storybook_app.get_options1Display(c)
+
+		opt1 = "default opt1"
+		opt2 = "default opt2"
+		opt3 = "default opt3"
+
+		if options3Display == "display:inline":
+			opt1 = storybook_app.get_opt1(c)
+			opt2 = storybook_app.get_opt2(c)
+			opt3 = storybook_app.get_opt3(c)
+		if options2Display == "display:inline":
+			opt1 = storybook_app.get_opt1(c)
+			opt2 = storybook_app.get_opt2(c)
+		if options1Display == "display:inline":
+			opt1 = storybook_app.get_opt1(c)
+
+		return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question, opt1=opt1, opt2=opt2, opt3=opt3,
+		options3Display=options3Display,
+		options2Display=options2Display,
+		options1Display=options1Display)
 
 
 

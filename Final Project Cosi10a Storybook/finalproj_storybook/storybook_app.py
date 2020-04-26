@@ -92,6 +92,9 @@ def story2_conditions(choices):
 			opt2 = "blue"
 			opt3 = "red"
 			pictureUrl = "https://i.imgur.com/acuLNws.jpg"
+			options3Display = "display:inline"
+			options2Display = "display:none"
+			options1Display = "display:none"
 
 		elif choices[0] == "go fishing":
 			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
@@ -107,10 +110,12 @@ def story2_conditions(choices):
 		if choices[0]=="get dressed" and choices[1] == "blue":
 			storytext = "I love this blue hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"
 			question = "Enter: start fishing"
-			opt1 = "blueop1"
-			opt2 = "blueop2"
-			opt3 = "blueopt3"
+			opt1 = "start fishing"
 			pictureUrl="https://i.imgur.com/TcaBpZU.jpg"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+
 		elif choices[0]=="get dressed" and choices[1] == "black":
 			storytext = "I love this black hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"
 			question = "Enter: start fishing"
@@ -150,9 +155,19 @@ def story2_conditions(choices):
 	conditions.update( {'storytext': storytext} )
 	conditions.update( {'question': question} )
 	conditions.update( {'pictureUrl': pictureUrl} )
-	conditions.update( {"opt1": opt1} )
-	conditions.update( {"opt2": opt2})
-	conditions.update( {"opt3": opt3})
+	if options3Display=="display:inline":
+		conditions.update( {"opt1": opt1} )
+		conditions.update( {"opt2": opt2})
+		conditions.update( {"opt3": opt3})
+	if options2Display=="display:inline":
+		conditions.update( {"opt1": opt1} )
+		conditions.update( {"opt2": opt2})
+	if options1Display=="display:inline":
+		conditions.update( {"opt1": opt1} )
+
+	conditions.update( {"options3Display": options3Display})
+	conditions.update( {"options2Display": options2Display})
+	conditions.update( {"options1Display": options1Display})
 	return conditions
 
 
@@ -173,3 +188,9 @@ def get_opt2(conditions):
 	return conditions['opt2']
 def get_opt3(conditions):
 	return conditions['opt3']
+def get_options3Display(conditions):
+	return conditions['options3Display']
+def get_options2Display(conditions):
+	return conditions['options2Display']
+def get_options1Display(conditions):
+	return conditions['options1Display']

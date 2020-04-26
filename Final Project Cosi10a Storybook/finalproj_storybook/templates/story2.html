@@ -17,18 +17,22 @@
 	<br>
 	<form style="font-size:20px" method="post" action="/story2">
 			{{question}} <br>
-			<input type="text" id="userChoice" name="userChoice" style={{page1Display}}> <br>
-			<p style="background-color:aqua;forecolor:blue;">
+			<input type="text" id="userChoice" name="userChoice" style="display:none"> <br>
+			<p style="background-color:#ff9933;">
 
-				<select id="story2Option" name="story2Option" style="display:inline">
+				<select id="story2Option" name="story2Option" style={{options3Display}}>
 					<option selected>{{opt1}}</option>
 					<option>{{opt2}}</option>
 					<option>{{opt3}}</option>
 			</select>
 
-			<select id="page1option" name="page1option" style="display:none" >
-					<option>page1 opt1</option>
-					<option>page2 opt1</option>
+			<select id="story2Option" name="story2Option" style={{options2Display}} >
+					<option selected>page2 opt1</option>
+					<option>page2 opt2</option>
+			</select>
+
+			<select id="story2Option" name="story2Option" style={{options1Display}} >
+					<option selected>page3 opt1</option>
 			</select>
 
 			</p>
