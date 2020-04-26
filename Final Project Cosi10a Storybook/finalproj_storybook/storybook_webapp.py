@@ -92,27 +92,34 @@ def welcome(name):
 
 @app.route('/story2start')
 def story2start():
-	storytext = "Hello, my name is Flippers! Today is going to be a great day. What should I do first?"
+	storytext = "Hello, my name is Flipper! Today is going to be a great day. What should I do first?"
 	question = "Enter: go swimming or go fishing or get dressed"
 	pictureUrl = "https://i.imgur.com/acuLNws.jpg"
-	return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question)
+	return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question, opt1="opt1", opt2="opt2", opt3="opt3")
 
 @app.route('/story2', methods=['GET','POST'])
 def story2():
+
 	if request.method == 'GET':
 		return story2start()
 
 	elif request.method == 'POST':
-#		choice = request.form['choice']
+		userChoice = request.form['story2Option']
 #		state['story2_choices'].append(choice)
 #		story2_choices = state['story2_choices']
-		c = storybook_app.story2_conditions(['go swimming', 'jump'])
-		storytext = storybook_app.get_storytext(c)
-		question = storybook_app.get_question(c)
-		pictureUrl = storybook_app.get_pictureUrl(c)
+#		c = storybook_app.story2_conditions(['go swimming', 'jump'])
+#		storytext = storybook_app.get_storytext(c)
+#		question = storybook_app.get_question(c)
+#		pictureUrl = storybook_app.get_pictureUrl(c)
+		storytext = userChoice
+		question = "why"
+		pictureUrl = "https://i.imgur.com/acuLNws.jpg"
+		opt1 = "opt4"
+		opt2 = "opt5"
+		opt3 = "opt6"
 
 #this is the url for after jump and snorkel
-		return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question)
+		return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question, opt1=opt1, opt2=opt2, opt3=opt3)
 
 
 

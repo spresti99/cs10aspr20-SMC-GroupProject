@@ -13,11 +13,19 @@
   <img id ="story2_image" src = {{picUrl}} width=600 height=400 </img>
   <br>
   <br>
-  <caption>  {{ storytext }} </caption>
+  <p style="font-size:20px">  {{ storytext }} </p>
   <br>
-  <form method="post" action="/story2">
+  <form style="font-size:20px" method="post" action="/story2">
       {{question}} <br>
-      <input type="text" choice="choice"> <br>
+      <!-- <input type="text" id="userChoice" name="userChoice" > <br> -->
+
+        <select id="story2Option" name="story2Option" >
+          <option selected>{{opt1}}</option>
+          <option>{{opt2}}</option>
+          <option>{{opt3}}</option>
+      </select>
+
+
       <input type="submit">
     </form>
 
