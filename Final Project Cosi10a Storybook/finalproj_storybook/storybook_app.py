@@ -190,6 +190,16 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 
+		elif choices[0]=="go fishing" and choices[1] == "ready" and choices[2]=="ready":
+			storytext = "Wow I just caught a big orange fish! Should I cast the line again or go swimming?"
+			question = "Enter: cast line or go swimming"
+			opt1 = "cast line"
+			opt2 = "go swimming"
+			pictureUrl="https://i.imgur.com/3bnZMCH.jpg"
+			options3Display = "display:none"
+			options2Display = "display:inline"
+			options1Display = "display:none"
+
 #	else:
 #		storytext = "What a fun day! Now it is time to go to sleep, goodnight!"
 
