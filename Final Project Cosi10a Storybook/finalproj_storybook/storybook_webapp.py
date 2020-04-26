@@ -94,7 +94,7 @@ def welcome(name):
 def story2start():
 	storytext = "Hello, my name is Flipper! Today is going to be a great day. What should I do first?"
 	question = "Enter: go swimming or go fishing or get dressed"
-	pictureUrl = "https://s7d8.turboimg.net/sp/9e5af98357ba5eb52687406caa643161/penguin_iceberg.jpg?83225"
+	pictureUrl = "https://s7d8.turboimg.net/t/52388292_penguin_iceberg.jpg"
 	state['story2_choices'] = []
 	return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question, opt1="go swimming", opt2="go fishing", opt3="get dressed",
 	options3Display="display:inline",
