@@ -5,20 +5,39 @@
 {% extends "fancylayout.html" %}
 
 {% block content %}
-  <div class="jumbotron">
-    <h1>Story Number 2</h1>
-  </div>
-  <p>Here is your story</p>
-  <br>
-  <img id ="story2_image" src = {{picUrl}} width=600 height=400 </img>
-  <br>
-  <br>
-  <caption>  {{ storytext }} </caption>
-  <br>
-  <form method="post" action="/story2">
-      {{question}} <br>
-      <input type="text" choice="choice"> <br>
-      <input type="submit">
-    </form>
+	<div class="jumbotron">
+		<h1>Story Number 2</h1>
+	</div>
+	<p style="font-size:20px">Here is your story</p>
+	<br>
+	<img id ="story2_image" src = {{picUrl}} width=600 height=400 </img>
+	<br>
+	<br>
+	<p style="font-size:20px">  {{ storytext }} </p>
+	<br>
+	<form style="font-size:20px" method="post" action="/story2">
+			{{question}} <br>
+			<input type="text" id="userChoice" name="userChoice" style="display:none"> <br>
+			<p style="background-color:#ff9933;">
+
+				<select id="story2Option" name="story2Option" style={{options3Display}}>
+					<option selected>{{opt1}}</option>
+					<option>{{opt2}}</option>
+					<option>{{opt3}}</option>
+			</select>
+
+			<select id="story2Option" name="story2Option" style={{options2Display}} >
+					<option selected>{{opt1}}</option>
+					<option>{{opt2}}</option>
+			</select>
+
+			<select id="story2Option" name="story2Option" style={{options1Display}} >
+					<option selected>{{opt1}}</option>
+			</select>
+
+			</p>
+
+			<input type="submit">
+		</form>
 
 {% endblock %}

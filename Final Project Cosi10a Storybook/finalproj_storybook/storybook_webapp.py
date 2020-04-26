@@ -11,7 +11,7 @@ global state
 
 state = {'message':'',
 		 'choice':'',
-		 }
+		 'story2_choices':[]}
 
 @app.route('/')
 @app.route('/main')
@@ -92,26 +92,55 @@ def welcome(name):
 
 @app.route('/story2start')
 def story2start():
-	storytext = "Hello, my name is Flippers! Today is going to be a great day. What should I do first?"
+	storytext = "Hello, my name is Flipper! Today is going to be a great day. What should I do first?"
 	question = "Enter: go swimming or go fishing or get dressed"
 	pictureUrl = "https://i.imgur.com/acuLNws.jpg"
-	pictureWidth=600
-	pictureheight=400
-	return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, pwidth=pictureWidth, pheight=pictureheight, question=question)
+	state['story2_choices'] = []
+	return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question, opt1="go swimming", opt2="go fishing", opt3="get dressed",
+	options3Display="display:inline",
+	options2Display="display:none",
+	options1Display="display:none")
 
 @app.route('/story2', methods=['GET','POST'])
 def story2():
+
 	if request.method == 'GET':
+		state['story2_choices'] = []
 		return story2start()
 
 	elif request.method == 'POST':
-		return story2start()
-#		choice = request.form['choice']
-#		c = storybook_app.story2_conditions(choice)
-#		storytext = storybook_app.get_storytext(c)
-#		question = storybook_app.get_question(c)
-#		pictureUrl = storybook_app.get_pictureUrl(c)
-#		return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, pwidth=pictureWidth, pheight=pictureheight, question=question)
+		userChoice = request.form['story2Option']
+		state['story2_choices'].append(userChoice)
+		c = storybook_app.story2_conditions(state['story2_choices'])
+		storytext = storybook_app.get_storytext(c)
+		question = storybook_app.get_question(c)
+		pictureUrl = storybook_app.get_pictureUrl(c)
+#		storytext = state['story2_choices']
+#		question = "why"
+#		pictureUrl = "https://i.imgur.com/qIEmd9Q.jpg"
+
+		options3Display = storybook_app.get_options3Display(c)
+		options2Display = storybook_app.get_options2Display(c)
+		options1Display = storybook_app.get_options1Display(c)
+
+		opt1 = "default opt1"
+		opt2 = "default opt2"
+		opt3 = "default opt3"
+
+		if options3Display == "display:inline":
+			opt1 = storybook_app.get_opt1(c)
+			opt2 = storybook_app.get_opt2(c)
+			opt3 = storybook_app.get_opt3(c)
+		if options2Display == "display:inline":
+			opt1 = storybook_app.get_opt1(c)
+			opt2 = storybook_app.get_opt2(c)
+		if options1Display == "display:inline":
+			opt1 = storybook_app.get_opt1(c)
+
+		return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question, opt1=opt1, opt2=opt2, opt3=opt3,
+		options3Display=options3Display,
+		options2Display=options2Display,
+		options1Display=options1Display)
 
 
 
