@@ -107,6 +107,9 @@ def story2_conditions(choices):
 		if choices[0]=="get dressed" and choices[1] == "blue":
 			storytext = "I love this blue hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"
 			question = "Enter: start fishing"
+			opt1 = "blueop1"
+			opt2 = "blueop2"
+			opt3 = "blueopt3"
 			pictureUrl="https://i.imgur.com/TcaBpZU.jpg"
 		elif choices[0]=="get dressed" and choices[1] == "black":
 			storytext = "I love this black hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"

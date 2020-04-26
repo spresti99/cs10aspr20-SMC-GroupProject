@@ -96,7 +96,7 @@ def story2start():
 	question = "Enter: go swimming or go fishing or get dressed"
 	pictureUrl = "https://i.imgur.com/acuLNws.jpg"
 	state['story2_choices'] = []
-	return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question, opt1="go swimming", opt2="go fishing", opt3="get dressed")
+	return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question, opt1="go swimming", opt2="go fishing", opt3="get dressed", page1Display="display:none")
 
 @app.route('/story2', methods=['GET','POST'])
 def story2():
@@ -118,8 +118,9 @@ def story2():
 		opt1 = storybook_app.get_opt1(c)
 		opt2 = storybook_app.get_opt2(c)
 		opt3 = storybook_app.get_opt3(c)
+		page1Display = "display:none"
 
-		return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question, opt1=opt1, opt2=opt2, opt3=opt3)
+		return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question, opt1=opt1, opt2=opt2, opt3=opt3, page1Display=page1Display)
 
 
 

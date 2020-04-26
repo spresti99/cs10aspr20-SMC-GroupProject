@@ -5,28 +5,35 @@
 {% extends "fancylayout.html" %}
 
 {% block content %}
-  <div class="jumbotron">
-    <h1>Story Number 2</h1>
-  </div>
-  <p style="font-size:20px">Here is your story</p>
-  <br>
-  <img id ="story2_image" src = {{picUrl}} width=600 height=400 </img>
-  <br>
-  <br>
-  <p style="font-size:20px">  {{ storytext }} </p>
-  <br>
-  <form style="font-size:20px" method="post" action="/story2">
-      {{question}} <br>
-      <!-- <input type="text" id="userChoice" name="userChoice" > <br> -->
+	<div class="jumbotron">
+		<h1>Story Number 2</h1>
+	</div>
+	<p style="font-size:20px">Here is your story</p>
+	<br>
+	<img id ="story2_image" src = {{picUrl}} width=600 height=400 </img>
+	<br>
+	<br>
+	<p style="font-size:20px">  {{ storytext }} </p>
+	<br>
+	<form style="font-size:20px" method="post" action="/story2">
+			{{question}} <br>
+			<input type="text" id="userChoice" name="userChoice" style={{page1Display}}> <br>
+			<p style="background-color:aqua;forecolor:blue;">
 
-        <select id="story2Option" name="story2Option" >
-          <option selected>{{opt1}}</option>
-          <option>{{opt2}}</option>
-          <option>{{opt3}}</option>
-      </select>
+				<select id="story2Option" name="story2Option" style="display:inline">
+					<option selected>{{opt1}}</option>
+					<option>{{opt2}}</option>
+					<option>{{opt3}}</option>
+			</select>
 
+			<select id="page1option" name="page1option" style="display:none" >
+					<option>page1 opt1</option>
+					<option>page2 opt1</option>
+			</select>
 
-      <input type="submit">
-    </form>
+			</p>
+
+			<input type="submit">
+		</form>
 
 {% endblock %}
