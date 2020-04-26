@@ -88,12 +88,15 @@ def story2_conditions(choices):
 		if choices[0] == "get dressed":
 			storytext = "Okay, time to get dressed. Let's pick out a color hat to wear"
 			question = "Enter: black or blue or red"
+			opt1 = "black"
+			opt2 = "blue"
+			opt3 = "red"
 			pictureUrl = "https://i.imgur.com/acuLNws.jpg"
 
 		elif choices[0] == "go fishing":
 			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
 			question = "Enter: ready"
-			pictureUrl = "https://i.imgur.com/OBjJmAT.jpg"
+			pictureUrl = "https://i.imgur.com/JqzW4Ff.jpg"
 
 		elif choices[0] == "go swimming":
 			storytext = "I put on my snorkel, now I am ready to jump into the ocean. On the count of 3, let's jump together! 1... 2... 3... JUMP!"
@@ -138,9 +141,15 @@ def story2_conditions(choices):
 			question = "Enter: ready"
 			pictureUrl="https://i.imgur.com/SMe1MD1.jpg"
 
+#	else:
+#		storytext = "What a fun day! Now it is time to go to sleep, goodnight!"
+
 	conditions.update( {'storytext': storytext} )
 	conditions.update( {'question': question} )
 	conditions.update( {'pictureUrl': pictureUrl} )
+	conditions.update( {"opt1": opt1} )
+	conditions.update( {"opt2": opt2})
+	conditions.update( {"opt3": opt3})
 	return conditions
 
 
@@ -155,3 +164,9 @@ def get_question(conditions):
 	return conditions['question']
 def get_pictureUrl(conditions):
 	return conditions['pictureUrl']
+def get_opt1(conditions):
+	return conditions['opt1']
+def get_opt2(conditions):
+	return conditions['opt2']
+def get_opt3(conditions):
+	return conditions['opt3']
