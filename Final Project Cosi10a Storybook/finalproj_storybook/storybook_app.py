@@ -99,12 +99,20 @@ def story2_conditions(choices):
 		elif choices[0] == "go fishing":
 			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
 			question = "Enter: ready"
+			opt1 = "ready"
 			pictureUrl = "https://i.imgur.com/JqzW4Ff.jpg"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
 
 		elif choices[0] == "go swimming":
 			storytext = "I put on my snorkel, now I am ready to jump into the ocean. On the count of 3, let's jump together! 1... 2... 3... JUMP!"
 			question = "Enter: jump"
+			opt1 = "jump"
 			pictureUrl = "https://i.imgur.com/qIEmd9Q.jpg"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
 
 	if len(choices)==2:
 		if choices[0]=="get dressed" and choices[1] == "blue":
@@ -119,35 +127,68 @@ def story2_conditions(choices):
 		elif choices[0]=="get dressed" and choices[1] == "black":
 			storytext = "I love this black hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"
 			question = "Enter: start fishing"
-			pictureUrl="https://i.imgur.com/jbZazrq.jpg"
+			opt1 = "start fishing"
+			pictureUrl="https://i.imgur.com/IDiSGp2.jpg"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+
 		elif choices[0]=="get dressed" and choices[1] == "red":
 			storytext = "I love this red hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"
 			question = "Enter: start fishing"
-			pictureUrl="https://i.imgur.com/6fBKoYg.jpg"
+			opt1 = "start fishing"
+			pictureUrl="https://i.imgur.com/sFc1S8p.jpg"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
 
 		elif choices[0] == "go fishing" and choices[1] == "ready":
 			storytext = "I hope to catch a big fish today. Tell me when you are ready to cast the line"
 			question = "Enter: ready"
+			opt1 = "ready"
 			pictureUrl = "https://i.imgur.com/aFscZZG.jpg"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
 
 		elif choices[0] == "go swimming" and choices[1]=="jump":
-			storytext = "SPLASH! Now we can explore underwater. Which friend do you want to visit? Willy the Whale, Fiona the Fish, or Connor the Crab"
-			question = "Enter: Willy or Fiona or Connor"
+			storytext = "SPLASH! Now we can explore underwater. Which friend do you want to visit? Willy the Whale, Fiona the Fish, or Colby the Crab"
+			question = "Enter: Willy or Fiona or Colby"
+			opt1 = "Willy"
+			opt2 = "Fiona"
+			opt3 = "Colby"
 			pictureUrl = "https://i.imgur.com/8cjaMgB.jpg"
+			options3Display = "display:inline"
+			options2Display = "display:none"
+			options1Display = "display:none"
 
 	if len(choices)==3:
 		if choices[0]=="get dressed" and choices[1] == "blue" and choices[2]=="start fishing":
 			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
 			question = "Enter: ready"
+			opt1 = "ready"
 			pictureUrl="https://i.imgur.com/iljLO8r.jpg"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+
 		elif choices[0]=="get dressed" and choices[1] == "black" and choices[2]=="start fishing":
 			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
 			question = "Enter: ready"
+			opt1 = "ready"
 			pictureUrl="https://i.imgur.com/IGWrjOy.jpg"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+
 		elif choices[0]=="get dressed" and choices[1] == "red" and choices[2]=="start fishing":
 			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
 			question = "Enter: ready"
+			opt1 = "ready"
 			pictureUrl="https://i.imgur.com/SMe1MD1.jpg"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
 
 #	else:
 #		storytext = "What a fun day! Now it is time to go to sleep, goodnight!"

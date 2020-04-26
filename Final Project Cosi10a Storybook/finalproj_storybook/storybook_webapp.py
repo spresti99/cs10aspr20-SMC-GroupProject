@@ -112,10 +112,10 @@ def story2():
 		userChoice = request.form['story2Option']
 		state['story2_choices'].append(userChoice)
 		c = storybook_app.story2_conditions(state['story2_choices'])
-#		storytext = storybook_app.get_storytext(c)
+		storytext = storybook_app.get_storytext(c)
 		question = storybook_app.get_question(c)
 		pictureUrl = storybook_app.get_pictureUrl(c)
-		storytext = state['story2_choices']
+#		storytext = state['story2_choices']
 #		question = "why"
 #		pictureUrl = "https://i.imgur.com/qIEmd9Q.jpg"
 
