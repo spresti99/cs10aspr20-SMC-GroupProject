@@ -83,40 +83,65 @@ if __name__ == "__main__":
 
 #the function story2_conditions returns a dictionary of the variables that will be passed to story2.html
 def story2_conditions(choices):
-    conditions = {}
-    if len(choices)==2:
-        if choices[0]=="get dressed" and choices[1] == "blue":
-            storytext = "I love this blue hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"
-            question = "Enter: start fishing"
-            pictureUrl="https://i.imgur.com/TcaBpZU.jpg"
-        elif choices[0]=="get dressed" and choices[1] == "black":
-            storytext = "I love this black hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"
-            question = "Enter: start fishing"
-            pictureUrl="https://i.imgur.com/jbZazrq.jpg"
-        elif choices[0]=="get dressed" and choices[1] == "red":
-            storytext = "I love this red hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"
-            question = "Enter: start fishing"
-            pictureUrl="https://i.imgur.com/6fBKoYg.jpg"
-    if len(choices)==1:
-        if choices[0] == "get dressed":
-            storytext = "Okay, time to get dressed. Let's pick out a color hat to wear"
-            question = "Enter: black or blue or red"
-            pictureUrl = "https://i.imgur.com/acuLNws.jpg"
+	conditions = {}
+	if len(choices)==1:
+		if choices[0] == "get dressed":
+			storytext = "Okay, time to get dressed. Let's pick out a color hat to wear"
+			question = "Enter: black or blue or red"
+			pictureUrl = "https://i.imgur.com/acuLNws.jpg"
 
-        if choices[0] == "go fishing":
-            storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
-            question = "Enter: ready"
-            pictureUrl = "https://i.imgur.com/OBjJmAT.jpg"
+		elif choices[0] == "go fishing":
+			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
+			question = "Enter: ready"
+			pictureUrl = "https://i.imgur.com/OBjJmAT.jpg"
 
-        if choices[0] == "go swimming":
-            storytext = "I put on my snorkel, now I am ready to jump into the ocean. On the count of 3, let's jump together! 1... 2... 3... JUMP!"
-            question = "Enter: jump"
-            pictureUrl = "https://i.imgur.com/qIEmd9Q.jpg"
+		elif choices[0] == "go swimming":
+			storytext = "I put on my snorkel, now I am ready to jump into the ocean. On the count of 3, let's jump together! 1... 2... 3... JUMP!"
+			question = "Enter: jump"
+			pictureUrl = "https://i.imgur.com/qIEmd9Q.jpg"
 
-    conditions.update( {'storytext': storytext} )
-    conditions.update( {'question': question} )
-    conditions.update( {'pictureUrl': pictureUrl} )
-    return conditions
+	if len(choices)==2:
+		if choices[0]=="get dressed" and choices[1] == "blue":
+			storytext = "I love this blue hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"
+			question = "Enter: start fishing"
+			pictureUrl="https://i.imgur.com/TcaBpZU.jpg"
+		elif choices[0]=="get dressed" and choices[1] == "black":
+			storytext = "I love this black hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"
+			question = "Enter: start fishing"
+			pictureUrl="https://i.imgur.com/jbZazrq.jpg"
+		elif choices[0]=="get dressed" and choices[1] == "red":
+			storytext = "I love this red hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"
+			question = "Enter: start fishing"
+			pictureUrl="https://i.imgur.com/6fBKoYg.jpg"
+
+		elif choices[0] == "go fishing" and choices[1] == "ready":
+			storytext = "I hope to catch a big fish today. Tell me when you are ready to cast the line"
+			question = "Enter: ready"
+			pictureUrl = "https://i.imgur.com/OBjJmAT.jpg"
+
+		elif choice[0] == "go swimming" and choice[1]==jump:
+			storytext = "SPLASH! Now we can explore underwater. Which friend do you want to visit? Willy the Whale, Fiona the Fish, or Connor the Crab"
+			question = "Enter: Willy or Fiona or Connor"
+			pictureUrl = "https://i.imgur.com/OBjJmAT.jpg"
+
+	if len(choices)==3:
+		if choices[0]=="get dressed" and choices[1] == "blue" and choices[2]=="start fishing":
+			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
+			question = "Enter: ready"
+			pictureUrl="https://i.imgur.com/iljLO8r.jpg"
+		elif choices[0]=="get dressed" and choices[1] == "black" and choices[2]=="start fishing":
+			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
+			question = "Enter: ready"
+			pictureUrl="https://i.imgur.com/IGWrjOy.jpg"
+		elif choices[0]=="get dressed" and choices[1] == "red" and choices[2]=="start fishing":
+			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
+			question = "Enter: ready"
+			pictureUrl="https://i.imgur.com/SMe1MD1.jpg"
+
+	conditions.update( {'storytext': storytext} )
+	conditions.update( {'question': question} )
+	conditions.update( {'pictureUrl': pictureUrl} )
+	return conditions
 
 
 

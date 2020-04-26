@@ -106,7 +106,7 @@ def story2():
 #		choice = request.form['choice']
 #		state['story2_choices'].append(choice)
 #		story2_choices = state['story2_choices']
-		c = storybook_app.story2_conditions(['get dressed','blue'])
+		c = storybook_app.story2_conditions(['get dressed','blue','start fishing'])
 		storytext = storybook_app.get_storytext(c)
 		question = storybook_app.get_question(c)
 		pictureUrl = storybook_app.get_pictureUrl(c)
