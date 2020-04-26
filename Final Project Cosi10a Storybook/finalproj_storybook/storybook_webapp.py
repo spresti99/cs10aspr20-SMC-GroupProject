@@ -11,7 +11,7 @@ global state
 
 state = {'message':'',
 		 'choice':'',
-		 }
+		 'story2_choices':['', '', '', '', '', '', '']}
 
 @app.route('/')
 @app.route('/main')
@@ -104,23 +104,12 @@ def story2():
 
 	elif request.method == 'POST':
 #		choice = request.form['choice']
-		choice = "go swimming"
-		if choice == "get dressed":
-			storytext = "Okay, time to get dressed. Let's pick out a color hat to wear"
-			question = "Enter: black or blue or red"
-			pictureUrl = "https://i.imgur.com/acuLNws.jpg"
-		if choice == "go fishing":
-			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
-			question = "Enter: Ready"
-			pictureUrl = "https://i.imgur.com/OBjJmAT.jpg"
-		if choice == "go swimming":
-			storytext = "I put on my snorkel, now I am ready to jump into the ocean. On the count of 3, let's jump together! 1... 2... 3... JUMP!"
-			question = "Enter: jump"
-			pictureUrl = "https://i.imgur.com/qIEmd9Q.jpg"
-#		c = storybook_app.story2_conditions(choice)
-#		storytext = storybook_app.get_storytext(c)
-#		question = storybook_app.get_question(c)
-#		pictureUrl = storybook_app.get_pictureUrl(c)
+#		state['story2_choices'].append(choice)
+#		story2_choices = state['story2_choices']
+		c = storybook_app.story2_conditions(['get dressed','blue'])
+		storytext = storybook_app.get_storytext(c)
+		question = storybook_app.get_question(c)
+		pictureUrl = storybook_app.get_pictureUrl(c)
 
 #this is the url for after jump and snorkel
 		return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question)
