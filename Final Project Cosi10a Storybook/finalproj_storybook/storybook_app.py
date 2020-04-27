@@ -323,6 +323,15 @@ def story2_conditions(choices):
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d8.turboimg.net/t1/52391945_penguin_swim_crab_fish.jpg"
 
+		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Colby" and choices[3]=="celebrate":
+			storytext = "Lets sing happy birthday to Fiona! All this partying has been really fun, but now I am tired and must go home to sleep."
+			question = "Enter: goodnight"
+			opt1 = "goodnight"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+			pictureUrl = "https://s7d7.turboimg.net/t1/52397544_penguin_swim_crab_fish_cake.jpg"
+
 	if len(choices)==5:
 		if choices[0]=="go fishing" and choices[1] == "ready" and choices[2]=="go swimming" and choices[3]=="jump" and choices[4]=="Willy":
 				storytext = "Hi Willy! I hope you have a great day swimming around in the ocean! I noticed that I am a little tired from swimming so much, so I am going to sleep now."
