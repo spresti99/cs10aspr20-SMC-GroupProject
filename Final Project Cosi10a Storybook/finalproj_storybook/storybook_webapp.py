@@ -118,7 +118,6 @@ def story2():
 		storytext = storybook_app.get_storytext(c)
 		question = storybook_app.get_question(c)
 		pictureUrl = storybook_app.get_pictureUrl(c)
-		storytext = state['story2_choices']
 		audio = storybook_app.get_audio(c)
 
 		options3Display = storybook_app.get_options3Display(c)
