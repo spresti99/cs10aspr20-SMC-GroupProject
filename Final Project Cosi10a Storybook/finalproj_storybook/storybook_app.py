@@ -98,6 +98,7 @@ def story2_conditions(choices):
 	storytext = ""
 	question = ""
 	pictureUrl = ""
+	audio = ""
 
 	if len(choices)==1:
 		if choices[0] == "get dressed":
@@ -110,6 +111,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:none"
 			pictureUrl = "https://s7d5.turboimg.net/t1/52388300_penguin_iceberg.jpg"
+			audio = "/static/getdressed.mp3"
 
 		elif choices[0] == "go fishing":
 			storytext = "I just grabbed my fishing pole and can't wait to catch some big fish. Tell me when you are ready to cast the line!"
@@ -226,23 +228,24 @@ def story2_conditions(choices):
 			pictureUrl = "https://s7d5.turboimg.net/t1/52388333_penguin_snorkel.jpg"
 
 		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy":
-			storytext = "Hello Willy! Thank you for reminding me that it is Fiona's birthday today! I should either bake her a cake or buy one from Colby the Crab's bakery"
+			storytext = "Hello Willy! Thank you for reminding me that it is Fiona's birthday today! I could either bake her a cake or buy one from Colby the Crab's bakery or go to sleep because it has been a long day."
 			question = "Enter: make cake or buy cake"
 			opt1 = "make cake"
 			opt2 = "buy cake"
-			opt3 = "test opt3"
+			opt3 = "goodnight"
 			options3Display = "display:inline"
 			options2Display = "display:none"
 			options1Display = "display:none"
 			pictureUrl = "https://s7d8.turboimg.net/t1/52391952_penguin_swim_whale.jpg"
 
 		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Fiona":
-			storytext = "Hello Fiona! Your scales look extra shiny today! Do you want to come with me and visit Willy or Colby?"
+			storytext = "Hello Fiona! Your scales look extra shiny today! Do you want to come with me and visit Willy or Colby or Tom?"
 			question = "Enter: Willy or Colby"
 			opt1 = "Willy"
 			opt2 = "Colby"
-			options3Display = "display:none"
-			options2Display = "display:inline"
+			opt3 = "Tom"
+			options3Display = "display:inline"
+			options2Display = "display:none"
 			options1Display = "display:none"
 			pictureUrl = "https://s7d8.turboimg.net/t1/52391947_penguin_swim_fish.jpg"
 
@@ -285,12 +288,13 @@ def story2_conditions(choices):
 			pictureUrl="https://s7d2.turboimg.net/t1/52391985_penguin_tophat_red_fishing_fish.jpg"
 
 		elif choices[0]=="go fishing" and choices[1] == "ready" and choices[2]=="go swimming" and choices[3]=="jump":
-			storytext = "SPLASH! Now we can explore underwater. Which friend do you want to visit? Willy the Whale or Colby the Crab"
+			storytext = "SPLASH! Now we can explore underwater. I can either choose a friend to visit or go to sleep."
 			question = "Enter: Willy or Colby"
 			opt1 = "Willy"
 			opt2 = "Colby"
-			options3Display = "display:none"
-			options2Display = "display:inline"
+			opt3 = "goodnight"
+			options3Display = "display:inline"
+			options2Display = "display:none"
 			options1Display = "display:none"
 			pictureUrl = "https://s7d5.turboimg.net/t1/52388334_penguin_swim.jpg"
 
@@ -331,6 +335,15 @@ def story2_conditions(choices):
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d8.turboimg.net/t1/52391945_penguin_swim_crab_fish.jpg"
 
+		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Fiona" and choices[3]=="Tom":
+			storytext = "Hi Tom, thank you for popping you head out of your shell to say hi! It is getting late, so I must swim back home."
+			question = "Enter: goodnight"
+			opt1 = "goodnight"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+			pictureUrl = "https://s7d2.turboimg.net/t1/52398139_penguin_swim_crab_fish_turtle.jpg"
+
 		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Colby" and choices[3]=="celebrate":
 			storytext = "Lets sing happy birthday to Fiona! All this partying has been really fun, but now I am tired and must go home to sleep."
 			question = "Enter: goodnight"
@@ -339,15 +352,6 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d7.turboimg.net/t1/52397544_penguin_swim_crab_fish_cake.jpg"
-
-		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[3]=="test opt3":
-			storytext = "Hello Willy! Thank you for reminding me that it is Fiona's birthday today! I should either bake her a cake or buy one from Colby the Crab's bakery"
-			question = "Enter: goodnight"
-			opt1 = "goodnight"
-			options3Display = "display:none"
-			options2Display = "display:none"
-			options1Display = "display:inline"
-			pictureUrl = "https://s7d8.turboimg.net/t1/52391952_penguin_swim_whale.jpg"
 
 	if len(choices)==5:
 		if choices[0]=="go fishing" and choices[1] == "ready" and choices[2]=="go swimming" and choices[3]=="jump" and choices[4]=="Willy":
@@ -369,15 +373,43 @@ def story2_conditions(choices):
 				pictureUrl = "https://s7d8.turboimg.net/t1/52391946_penguin_swim_crab_touch_botton.jpg"
 
 		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[3]=="make cake" or choices[3]=="buy cake" and choices[4]=="celebrate":
-			storytext = "Hi Fiona, I made a cake for you! Should I say happy birthday or sing happy birthday to Fiona?"
+			storytext = "Hi Fiona, I made a cake for you! Should I make a banner that says happy birthday, say happy birthday, or sing happy birthday to Fiona?"
 			question = "Enter: say or sing"
-			opt1 = "say"
-			opt2 = "sing"
-			options3Display = "display:none"
-			options2Display = "display:inline"
+			opt1 = "make banner"
+			opt2 = "say"
+			opt3 = "sing"
+			options3Display = "display:inline"
+			options2Display = "display:none"
 			options1Display = "display:none"
 			pictureUrl = "https://s7d5.turboimg.net/t1/52392168_penguin_swim_fish_cake_bubbles.jpg"
 
+	if len(choices)==6:
+		if choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[3]=="make cake" or choices[3]=="buy cake" and choices[4]=="celebrate" and choices[5]=="make banner":
+			storytext = "This has been a really fun birthday party, but it is getting late so I must swim home. Enjoy your birthday banner and cake!"
+			question = "Enter: goodnight"
+			opt1 = "goodnight"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+			pictureUrl = "https://s7d5.turboimg.net/t1/52398144_penguin_swim_fish_cake_banner.jpg"
+
+		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[3]=="make cake" or choices[3]=="buy cake" and choices[4]=="celebrate" and choices[5]=="say":
+			storytext = "This has been a really fun birthday party, but it is getting late so I must swim home. Enjoy your cake!"
+			question = "Enter: goodnight"
+			opt1 = "goodnight"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+			pictureUrl = "https://s7d8.turboimg.net/t1/52391950_penguin_swim_fish_cake_exclaim.jpg"
+
+		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[3]=="make cake" or choices[3]=="buy cake" and choices[4]=="celebrate" and choices[5]=="sing":
+			storytext = "This has been a really fun birthday party, but it is getting late so I must swim home. Enjoy your cake!"
+			question = "Enter: goodnight"
+			opt1 = "goodnight"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+			pictureUrl = "https://s7d8.turboimg.net/t1/52391951_penguin_swim_fish_cake_sing.jpg"
 
 	if "goodnight" in choices:
 		storytext = "What a fun day! Now it is time to go to sleep, goodnight!"
@@ -404,6 +436,7 @@ def story2_conditions(choices):
 	conditions.update( {"options3Display": options3Display})
 	conditions.update( {"options2Display": options2Display})
 	conditions.update( {"options1Display": options1Display})
+	conditions.update( {"audio":audio})
 	return conditions
 
 
@@ -430,3 +463,5 @@ def get_options2Display(conditions):
 	return conditions['options2Display']
 def get_options1Display(conditions):
 	return conditions['options1Display']
+def get_audio(conditions):
+	return conditions['audio']
