@@ -92,6 +92,13 @@ def grab_fishing_pole():
 #the function story2_conditions returns a dictionary of the variables that will be passed to story2.html
 def story2_conditions(choices):
 	conditions = {}
+	options1Display = "display:none"
+	options2Display = "display:none"
+	options3Display = "display:none"
+	storytext = ""
+	question = ""
+	pictureUrl = ""
+
 	if len(choices)==1:
 		if choices[0] == "get dressed":
 			storytext = "Okay, time to get dressed. Let's pick out a color hat to wear"
@@ -223,8 +230,9 @@ def story2_conditions(choices):
 			question = "Enter: make cake or buy cake"
 			opt1 = "make cake"
 			opt2 = "buy cake"
-			options3Display = "display:none"
-			options2Display = "display:inline"
+			opt3 = "test opt3"
+			options3Display = "display:inline"
+			options2Display = "display:none"
 			options1Display = "display:none"
 			pictureUrl = "https://s7d8.turboimg.net/t1/52391952_penguin_swim_whale.jpg"
 
@@ -332,6 +340,15 @@ def story2_conditions(choices):
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d7.turboimg.net/t1/52397544_penguin_swim_crab_fish_cake.jpg"
 
+		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[3]=="test opt3":
+			storytext = "Hello Willy! Thank you for reminding me that it is Fiona's birthday today! I should either bake her a cake or buy one from Colby the Crab's bakery"
+			question = "Enter: goodnight"
+			opt1 = "goodnight"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+			pictureUrl = "https://s7d8.turboimg.net/t1/52391952_penguin_swim_whale.jpg"
+
 	if len(choices)==5:
 		if choices[0]=="go fishing" and choices[1] == "ready" and choices[2]=="go swimming" and choices[3]=="jump" and choices[4]=="Willy":
 				storytext = "Hi Willy! I hope you have a great day swimming around in the ocean! I noticed that I am a little tired from swimming so much, so I am going to sleep now."
@@ -362,7 +379,7 @@ def story2_conditions(choices):
 			pictureUrl = "https://s7d5.turboimg.net/t1/52392168_penguin_swim_fish_cake_bubbles.jpg"
 
 
-	elif "goodnight" in choices:
+	if "goodnight" in choices:
 		storytext = "What a fun day! Now it is time to go to sleep, goodnight!"
 		question = ""
 		options3Display = "display:none"
