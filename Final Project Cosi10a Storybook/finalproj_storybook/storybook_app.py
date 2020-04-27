@@ -80,6 +80,14 @@ if __name__ == "__main__":
 	intro_story()
 	owl_story()
 
+def grab_fishing_pole():
+	storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
+	question = "Enter: ready"
+	opt1 = "ready"
+	options3Display = "display:none"
+	options2Display = "display:none"
+	options1Display = "display:inline"
+	return [storytext, question, opt1, options3Display, options2Display, options1Display]
 
 #the function story2_conditions returns a dictionary of the variables that will be passed to story2.html
 def story2_conditions(choices):
@@ -91,65 +99,67 @@ def story2_conditions(choices):
 			opt1 = "black"
 			opt2 = "blue"
 			opt3 = "red"
-			pictureUrl = "https://s7d5.turboimg.net/t1/52388300_penguin_iceberg.jpg"
 			options3Display = "display:inline"
 			options2Display = "display:none"
 			options1Display = "display:none"
+			pictureUrl = "https://s7d5.turboimg.net/t1/52388300_penguin_iceberg.jpg"
 
 		elif choices[0] == "go fishing":
-			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
+			storytext = "I just grabbed my fishing pole and can't wait to catch some big fish. Tell me when you are ready to cast the line!"
 			question = "Enter: ready"
 			opt1 = "ready"
-			pictureUrl = "https://s7d5.turboimg.net/t1/52388331_penguin_iceberg_fishing.jpg"
 			options3Display = "display:none"
 			options2Display = "display:none"
 			options1Display = "display:inline"
+			pictureUrl = "https://s7d5.turboimg.net/t1/52388331_penguin_iceberg_fishing.jpg"
 
 		elif choices[0] == "go swimming":
 			storytext = "I put on my snorkel, now I am ready to jump into the ocean. On the count of 3, let's jump together! 1... 2... 3... JUMP!"
 			question = "Enter: jump"
 			opt1 = "jump"
-			pictureUrl = "https://s7d5.turboimg.net/t1/52388333_penguin_snorkel.jpg"
 			options3Display = "display:none"
 			options2Display = "display:none"
 			options1Display = "display:inline"
+			pictureUrl = "https://s7d5.turboimg.net/t1/52388333_penguin_snorkel.jpg"
 
 	if len(choices)==2:
 		if choices[0]=="get dressed" and choices[1] == "blue":
 			storytext = "I love this blue hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"
 			question = "Enter: start fishing"
 			opt1 = "start fishing"
-			pictureUrl="https://s7d5.turboimg.net/t1/52388336_penguin_tophat_blue.jpg"
 			options3Display = "display:none"
 			options2Display = "display:none"
 			options1Display = "display:inline"
+			pictureUrl="https://s7d5.turboimg.net/t1/52388336_penguin_tophat_blue.jpg"
 
 		elif choices[0]=="get dressed" and choices[1] == "black":
 			storytext = "I love this black hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"
 			question = "Enter: start fishing"
 			opt1 = "start fishing"
-			pictureUrl="https://s7d5.turboimg.net/t1/52388335_penguin_tophat.jpg"
 			options3Display = "display:none"
 			options2Display = "display:none"
 			options1Display = "display:inline"
+			pictureUrl="https://s7d5.turboimg.net/t1/52388335_penguin_tophat.jpg"
 
 		elif choices[0]=="get dressed" and choices[1] == "red":
 			storytext = "I love this red hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"
 			question = "Enter: start fishing"
 			opt1 = "start fishing"
-			pictureUrl="https://s7d5.turboimg.net/t1/52388339_penguin_tophat_red.jpg"
 			options3Display = "display:none"
 			options2Display = "display:none"
 			options1Display = "display:inline"
+			pictureUrl="https://s7d5.turboimg.net/t1/52388339_penguin_tophat_red.jpg"
 
 		elif choices[0] == "go fishing" and choices[1] == "ready":
-			storytext = "I hope to catch a big fish today. Tell me when you are ready to cast the line"
-			question = "Enter: ready"
-			opt1 = "ready"
-			pictureUrl = "https://s7d5.turboimg.net/t1/52388331_penguin_iceberg_fishing.jpg"
-			options3Display = "display:none"
+			storytext = "Wow I just caught a big orange fish! Should I cast the line again or go swimming or go to sleep?"
+			question = "Enter: cast line or go swimming or goodnight"
+			opt1 = "cast line"
+			opt2 = "go swimming"
+			opt3 = "goodnight"
+			options3Display = "display:inline"
 			options2Display = "display:none"
-			options1Display = "display:inline"
+			options1Display = "display:none"
+			pictureUrl="https://s7d5.turboimg.net/t1/52388332_penguin_iceberg_fishing_orange.jpg"
 
 		elif choices[0] == "go swimming" and choices[1]=="jump":
 			storytext = "SPLASH! Now we can explore underwater. Which friend do you want to visit? Willy the Whale, Fiona the Fish, or Colby the Crab"
@@ -157,65 +167,201 @@ def story2_conditions(choices):
 			opt1 = "Willy"
 			opt2 = "Fiona"
 			opt3 = "Colby"
-			pictureUrl = "https://s7d5.turboimg.net/t1/52388334_penguin_swim.jpg"
 			options3Display = "display:inline"
 			options2Display = "display:none"
 			options1Display = "display:none"
+			pictureUrl = "https://s7d5.turboimg.net/t1/52388334_penguin_swim.jpg"
 
 	if len(choices)==3:
 		if choices[0]=="get dressed" and choices[1] == "blue" and choices[2]=="start fishing":
 			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
 			question = "Enter: ready"
 			opt1 = "ready"
-			pictureUrl="https://s7d5.turboimg.net/t1/52388337_penguin_tophat_blue_fishing.jpg"
 			options3Display = "display:none"
 			options2Display = "display:none"
 			options1Display = "display:inline"
+			pictureUrl="https://s7d5.turboimg.net/t1/52388337_penguin_tophat_blue_fishing.jpg"
 
 		elif choices[0]=="get dressed" and choices[1] == "black" and choices[2]=="start fishing":
 			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
 			question = "Enter: ready"
 			opt1 = "ready"
-			pictureUrl="https://s7d5.turboimg.net/t1/52388338_penguin_tophat_fishing.jpg"
 			options3Display = "display:none"
 			options2Display = "display:none"
 			options1Display = "display:inline"
+			pictureUrl="https://s7d5.turboimg.net/t1/52388338_penguin_tophat_fishing.jpg"
 
 		elif choices[0]=="get dressed" and choices[1] == "red" and choices[2]=="start fishing":
 			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
 			question = "Enter: ready"
 			opt1 = "ready"
-			pictureUrl="https://s7d5.turboimg.net/t1/52388340_penguin_tophat_red_fishing.jpg"
 			options3Display = "display:none"
 			options2Display = "display:none"
 			options1Display = "display:inline"
+			pictureUrl="https://s7d5.turboimg.net/t1/52388340_penguin_tophat_red_fishing.jpg"
 
-		elif choices[0]=="go fishing" and choices[1] == "ready" and choices[2]=="ready":
-			storytext = "Wow I just caught a big orange fish! Should I cast the line again or go swimming or go to sleep?"
-			question = "Enter: cast line or go swimming or goodnight"
-			opt1 = "cast line"
-			opt2 = "go swimming"
-			opt3 = "goodnight"
-			pictureUrl="https://s7d5.turboimg.net/t1/52388332_penguin_iceberg_fishing_orange.jpg"
-			options3Display = "display:inline"
+		elif choices[0]=="go fishing" and choices[1] == "ready" and choices[2]=="cast line":
+			storytext = "Wow I just caught a big blue fish! I am getting tired, I think it is time to go to sleep."
+			question = "Enter: goodnight"
+			opt1 = "goodnight"
+			options3Display = "display:none"
 			options2Display = "display:none"
+			options1Display = "display:inline"
+			pictureUrl="https://s7d6.turboimg.net/t1/52391969_penguin_iceberg_fishing_blue.jpg"
+
+		elif choices[0]=="go fishing" and choices[1] == "ready" and choices[2]=="go swimming":
+			storytext = "I let the fish back into the ocean, put back my fishing rod, and found my snorkel. Now I am ready to swim. On the count of 3 let's jump together, 1... 2... 3... JUMP!"
+			question = "Enter: jump"
+			opt1 = "jump"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+			pictureUrl = "https://s7d5.turboimg.net/t1/52388333_penguin_snorkel.jpg"
+
+		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy":
+			storytext = "Hello Willy! Thank you for reminding me that it is Fiona's birthday today! I should either bake her a cake or buy one from Colby the Crab's bakery"
+			question = "Enter: make cake or buy cake"
+			opt1 = "make cake"
+			opt2 = "buy cake"
+			options3Display = "display:none"
+			options2Display = "display:inline"
 			options1Display = "display:none"
+			pictureUrl = "https://s7d8.turboimg.net/t1/52391952_penguin_swim_whale.jpg"
+
+		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Fiona":
+			storytext = "Hello Fiona! Your scales look extra shiny today! Do you want to come with me and visit Willy or Colby?"
+			question = "Enter: Willy or Colby"
+			opt1 = "Willy"
+			opt2 = "Colby"
+			options3Display = "display:none"
+			options2Display = "display:inline"
+			options1Display = "display:none"
+			pictureUrl = "https://s7d8.turboimg.net/t1/52391947_penguin_swim_fish.jpg"
+
+		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Colby":
+			storytext = "Hello Colby! Mmmmmm it smells really good down at the bottom of the ocean! It seems like you baked a cake for Fiona's birthday, let's go celebrate with her"
+			question = "Enter: celebrate"
+			opt1 = "celebrate"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+			pictureUrl = "https://s7d8.turboimg.net/t1/52391946_penguin_swim_crab_touch_botton.jpg"
+
+
+	if len(choices)==4:
+		if choices[0]=="get dressed" and choices[1] == "blue" and choices[2]=="start fishing" and choices[3]=="ready":
+			storytext = "Wow it has been a productive day, I got dressed into a blue hat and caught a big orange fish! Now I am tired and ready to go to sleep."
+			question = "Enter: goodnight"
+			opt1 = "goodnight"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+			pictureUrl="https://s7d2.turboimg.net/t1/52391983_penguin_tophat_blue_fishing_fish.jpg"
+
+		elif choices[0]=="get dressed" and choices[1] == "black" and choices[2]=="start fishing" and choices[3]=="ready":
+			storytext = "Wow it has been a productive day, I got dressed into a black hat and caught a big orange fish! Now I am tired and ready to go to sleep."
+			question = "Enter: goodnight"
+			opt1 = "goodnight"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+			pictureUrl="https://s7d2.turboimg.net/t1/52391984_penguin_tophat_fishing_fish.jpg"
+
+		elif choices[0]=="get dressed" and choices[1] == "red" and choices[2]=="start fishing" and choices[3]=="ready":
+			storytext = "Wow it has been a productive day, I got dressed into a red hat and caught a big orange fish! Now I am tired and ready to go to sleep."
+			question = "Enter: goodnight"
+			opt1 = "goodnight"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+			pictureUrl="https://s7d2.turboimg.net/t1/52391985_penguin_tophat_red_fishing_fish.jpg"
+
+		elif choices[0]=="go fishing" and choices[1] == "ready" and choices[2]=="go swimming" and choices[3]=="jump":
+			storytext = "SPLASH! Now we can explore underwater. Which friend do you want to visit? Willy the Whale or Colby the Crab"
+			question = "Enter: Willy or Colby"
+			opt1 = "Willy"
+			opt2 = "Colby"
+			options3Display = "display:none"
+			options2Display = "display:inline"
+			options1Display = "display:none"
+			pictureUrl = "https://s7d5.turboimg.net/t1/52388334_penguin_swim.jpg"
+
+
+		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[3]=="make cake":
+			storytext = "I made the cake by mixing together flour, sugar, eggs, and butter. Now it is time to deliver the cake to Fiona and celebrate her birthday!"
+			question = "Enter: celebrate"
+			opt1 = "celebrate"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+			pictureUrl = "https://s7d8.turboimg.net/t1/52391942_penguin_swim_cake.jpg"
+
+		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[3]=="buy cake":
+			storytext = "Thank you Colby for making this wonderful cake. Now it is time to deliver the cake to Fiona and celebrate her birthday!"
+			question = "Enter: celebrate"
+			opt1 = "celebrate"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+			pictureUrl = "https://s7d8.turboimg.net/t1/52391944_penguin_swim_crab_cake.jpg"
+
+		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Fiona" and choices[3]=="Willy":
+			storytext = "Whale hello there Willy! Haha get it :) I just wanted to come say hi before I swim back home and Fiona followed along."
+			question = "Enter: goodnight"
+			opt1 = "goodnight"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+			pictureUrl = "https://s7d6.turboimg.net/t1/52392171_penguin_swim_whale_fish.jpg"
+
+		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Fiona" and choices[3]=="Colby":
+			storytext = "Hi Colby, hope we didn't wake you up! We just wanted to come say hi before I swim back home."
+			question = "Enter: goodnight"
+			opt1 = "goodnight"
+			options3Display = "display:none"
+			options2Display = "display:none"
+			options1Display = "display:inline"
+			pictureUrl = "https://s7d8.turboimg.net/t1/52391945_penguin_swim_crab_fish.jpg"
+
+	if len(choices)==5:
+		if choices[0]=="go fishing" and choices[1] == "ready" and choices[2]=="go swimming" and choices[3]=="jump" and choices[4]=="Willy":
+				storytext = "Hi Willy! I hope you have a great day swimming around in the ocean! I noticed that I am a little tired from swimming so much, so I am going to sleep now."
+				question = "Enter: goodnight"
+				opt1 = "goodnight"
+				options3Display = "display:none"
+				options2Display = "display:none"
+				options1Display = "display:inline"
+				pictureUrl = "https://s7d8.turboimg.net/t1/52391952_penguin_swim_whale.jpg"
+
+		elif choices[0]=="go fishing" and choices[1] == "ready" and choices[2]=="go swimming" and choices[3]=="jump" and choices[4]=="Colby":
+				storytext = "Hi Colby! I never realized how soft the sand is down here. No wonder you love living on the ocean floor! Swimming took a lot of energy, so I am going to go home and sleep."
+				question = "Enter: goodnight"
+				opt1 = "goodnight"
+				options3Display = "display:none"
+				options2Display = "display:none"
+				options1Display = "display:inline"
+				pictureUrl = "https://s7d8.turboimg.net/t1/52391946_penguin_swim_crab_touch_botton.jpg"
+
+		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[3]=="make cake" or choices[3]=="buy cake" and choices[4]=="celebrate":
+			storytext = "Hi Fiona, I made a cake for you! Should I say happy birthday or sing happy birthday to Fiona?"
+			question = "Enter: say or sing"
+			opt1 = "say"
+			opt2 = "sing"
+			options3Display = "display:none"
+			options2Display = "display:inline"
+			options1Display = "display:none"
+			pictureUrl = "https://s7d5.turboimg.net/t1/52392168_penguin_swim_fish_cake_bubbles.jpg"
+
 
 	elif "goodnight" in choices:
 		storytext = "What a fun day! Now it is time to go to sleep, goodnight!"
-		question = "Enter: goodnight"
-		opt1 = "goodnight"
-		pictureUrl="https://s7d5.turboimg.net/t1/52388330_penguin_goodnight.jpg"
+		question = ""
 		options3Display = "display:none"
 		options2Display = "display:none"
-		options1Display = "display:inline"
+		options1Display = "display:none"
+		pictureUrl="https://s7d5.turboimg.net/t1/52388330_penguin_goodnight.jpg"
 
-#	else:
-#		storytext = "What a fun day! Now it is time to go to sleep, goodnight!"
 
-	conditions.update( {'storytext': storytext} )
-	conditions.update( {'question': question} )
-	conditions.update( {'pictureUrl': pictureUrl} )
 	if options3Display=="display:inline":
 		conditions.update( {"opt1": opt1} )
 		conditions.update( {"opt2": opt2})
@@ -226,6 +372,9 @@ def story2_conditions(choices):
 	if options1Display=="display:inline":
 		conditions.update( {"opt1": opt1} )
 
+	conditions.update( {'storytext': storytext} )
+	conditions.update( {'question': question} )
+	conditions.update( {'pictureUrl': pictureUrl} )
 	conditions.update( {"options3Display": options3Display})
 	conditions.update( {"options2Display": options2Display})
 	conditions.update( {"options1Display": options1Display})
