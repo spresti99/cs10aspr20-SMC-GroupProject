@@ -240,7 +240,7 @@ def story2_conditions(choices):
 
 		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Fiona":
 			storytext = "Hello Fiona! Your scales look extra shiny today! Do you want to come with me and visit Willy or Colby or Tom?"
-			question = "Enter: Willy or Colby"
+			question = "Enter: Willy or Colby or Tom"
 			opt1 = "Willy"
 			opt2 = "Colby"
 			opt3 = "Tom"
@@ -374,7 +374,7 @@ def story2_conditions(choices):
 
 		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[3]=="make cake" or choices[3]=="buy cake" and choices[4]=="celebrate":
 			storytext = "Hi Fiona, I made a cake for you! Should I make a banner that says happy birthday, say happy birthday, or sing happy birthday to Fiona?"
-			question = "Enter: say or sing"
+			question = "Enter: make banner or say or sing"
 			opt1 = "make banner"
 			opt2 = "say"
 			opt3 = "sing"
@@ -384,7 +384,7 @@ def story2_conditions(choices):
 			pictureUrl = "https://s7d5.turboimg.net/t1/52392168_penguin_swim_fish_cake_bubbles.jpg"
 
 	if len(choices)==6:
-		if choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[3]=="make cake" or choices[3]=="buy cake" and choices[4]=="celebrate" and choices[5]=="make banner":
+		if choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[4]=="celebrate" and choices[5]=="make banner" and choices[3]=="make cake" or choices[3]=="buy cake":
 			storytext = "This has been a really fun birthday party, but it is getting late so I must swim home. Enjoy your birthday banner and cake!"
 			question = "Enter: goodnight"
 			opt1 = "goodnight"
@@ -393,7 +393,7 @@ def story2_conditions(choices):
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d5.turboimg.net/t1/52398144_penguin_swim_fish_cake_banner.jpg"
 
-		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[3]=="make cake" or choices[3]=="buy cake" and choices[4]=="celebrate" and choices[5]=="say":
+		if choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[4]=="celebrate" and choices[5]=="say" and choices[3]=="make cake" or choices[3]=="buy cake":
 			storytext = "This has been a really fun birthday party, but it is getting late so I must swim home. Enjoy your cake!"
 			question = "Enter: goodnight"
 			opt1 = "goodnight"
@@ -402,7 +402,7 @@ def story2_conditions(choices):
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d8.turboimg.net/t1/52391950_penguin_swim_fish_cake_exclaim.jpg"
 
-		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[3]=="make cake" or choices[3]=="buy cake" and choices[4]=="celebrate" and choices[5]=="sing":
+		if choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[4]=="celebrate" and choices[5]=="sing" and choices[3]=="make cake" or choices[3]=="buy cake":
 			storytext = "This has been a really fun birthday party, but it is getting late so I must swim home. Enjoy your cake!"
 			question = "Enter: goodnight"
 			opt1 = "goodnight"
