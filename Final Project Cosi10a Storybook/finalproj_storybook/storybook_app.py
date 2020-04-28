@@ -111,7 +111,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:none"
 			pictureUrl = "https://s7d5.turboimg.net/t1/52388300_penguin_iceberg.jpg"
-			audio = "/static/getdressed.mp3"
+			audio = "/static/GetDressedML.mp3"
 
 		elif choices[0] == "go fishing":
 			storytext = "I just grabbed my fishing pole and can't wait to catch some big fish. Tell me when you are ready to cast the line!"
@@ -121,6 +121,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d5.turboimg.net/t1/52388331_penguin_iceberg_fishing.jpg"
+			audio = "/static/GoFishing.mp3"
 
 		elif choices[0] == "go swimming":
 			storytext = "I put on my snorkel, now I am ready to jump into the ocean. On the count of 3, let's jump together! 1... 2... 3... JUMP!"
@@ -130,6 +131,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d5.turboimg.net/t1/52388333_penguin_snorkel.jpg"
+			audio = "/static/GoSwimming.mp3"
 
 	if len(choices)==2:
 		if choices[0]=="get dressed" and choices[1] == "blue":
@@ -140,6 +142,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl="https://s7d5.turboimg.net/t1/52388336_penguin_tophat_blue.jpg"
+			audio = "/static/BlueHat.mp3"
 
 		elif choices[0]=="get dressed" and choices[1] == "black":
 			storytext = "I love this black hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"
@@ -149,6 +152,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl="https://s7d5.turboimg.net/t1/52388335_penguin_tophat.jpg"
+			audio = "/static/BlackHat.mp3"
 
 		elif choices[0]=="get dressed" and choices[1] == "red":
 			storytext = "I love this red hat, thanks for helping me choose to wear it today. I am now ready to go outside and fish!"
@@ -158,6 +162,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl="https://s7d5.turboimg.net/t1/52388339_penguin_tophat_red.jpg"
+			audio = "/static/RedHat.mp3"
 
 		elif choices[0] == "go fishing" and choices[1] == "ready":
 			storytext = "Wow I just caught a big orange fish! Should I cast the line again or go swimming or go to sleep?"
@@ -169,6 +174,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:none"
 			pictureUrl="https://s7d5.turboimg.net/t1/52388332_penguin_iceberg_fishing_orange.jpg"
+			audio = "/static/FishingReady.mp3"
 
 		elif choices[0] == "go swimming" and choices[1]=="jump":
 			storytext = "SPLASH! Now we can explore underwater. Which friend do you want to visit? Willy the Whale, Fiona the Fish, or Colby the Crab"
@@ -180,6 +186,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:none"
 			pictureUrl = "https://s7d5.turboimg.net/t1/52388334_penguin_swim.jpg"
+			audio = "/static/SwimmingJump.mp3"
 
 	if len(choices)==3:
 		if choices[0]=="get dressed" and choices[1] == "blue" and choices[2]=="start fishing":
@@ -190,6 +197,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl="https://s7d5.turboimg.net/t1/52388337_penguin_tophat_blue_fishing.jpg"
+			audio = "/static/HatFish.mp3"
 
 		elif choices[0]=="get dressed" and choices[1] == "black" and choices[2]=="start fishing":
 			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
@@ -199,6 +207,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl="https://s7d5.turboimg.net/t1/52388338_penguin_tophat_fishing.jpg"
+			audio = "/static/HatFish.mp3"
 
 		elif choices[0]=="get dressed" and choices[1] == "red" and choices[2]=="start fishing":
 			storytext = "I just grabbed my fishing pole, now I am ready to catch some fish. Tell me when you are ready to cast the line!"
@@ -208,6 +217,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl="https://s7d5.turboimg.net/t1/52388340_penguin_tophat_red_fishing.jpg"
+			audio = "/static/HatFish.mp3"
 
 		elif choices[0]=="go fishing" and choices[1] == "ready" and choices[2]=="cast line":
 			storytext = "Wow I just caught a big blue fish! I am getting tired, I think it is time to go to sleep."
@@ -217,6 +227,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl="https://s7d6.turboimg.net/t1/52391969_penguin_iceberg_fishing_blue.jpg"
+			audio = "/static/FishingReadyCastline.mp3"
 
 		elif choices[0]=="go fishing" and choices[1] == "ready" and choices[2]=="go swimming":
 			storytext = "I let the fish back into the ocean, put back my fishing rod, and found my snorkel. Now I am ready to swim. On the count of 3 let's jump together, 1... 2... 3... JUMP!"
@@ -226,6 +237,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d5.turboimg.net/t1/52388333_penguin_snorkel.jpg"
+			audio = "/static/FishingReadySwimming.mp3"
 
 		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy":
 			storytext = "Hello Willy! Thank you for reminding me that it is Fiona's birthday today! I could either bake her a cake or buy one from Colby the Crab's bakery or go to sleep because it has been a long day."
@@ -237,6 +249,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:none"
 			pictureUrl = "https://s7d8.turboimg.net/t1/52391952_penguin_swim_whale.jpg"
+			audio = "/static/SwimmingJumpWilly.mp3"
 
 		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Fiona":
 			storytext = "Hello Fiona! Your scales look extra shiny today! Do you want to come with me and visit Willy or Colby or Tom?"
@@ -248,6 +261,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:none"
 			pictureUrl = "https://s7d8.turboimg.net/t1/52391947_penguin_swim_fish.jpg"
+			audio = "/static/SwimmingJumpFiona.mp3"
 
 		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Colby":
 			storytext = "Hello Colby! Mmmmmm it smells really good down at the bottom of the ocean! It seems like you baked a cake for Fiona's birthday, let's go celebrate with her"
@@ -257,6 +271,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d8.turboimg.net/t1/52391946_penguin_swim_crab_touch_botton.jpg"
+			audio = "/static/SwimmingJumpColby.mp3"
 
 
 	if len(choices)==4:
@@ -268,6 +283,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl="https://s7d2.turboimg.net/t1/52391983_penguin_tophat_blue_fishing_fish.jpg"
+			audio = "/static/DressedBlueTired.mp3"
 
 		elif choices[0]=="get dressed" and choices[1] == "black" and choices[2]=="start fishing" and choices[3]=="ready":
 			storytext = "Wow it has been a productive day, I got dressed into a black hat and caught a big orange fish! Now I am tired and ready to go to sleep."
@@ -277,6 +293,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl="https://s7d2.turboimg.net/t1/52391984_penguin_tophat_fishing_fish.jpg"
+			audio = "/static/DressedBlackTired.mp3"
 
 		elif choices[0]=="get dressed" and choices[1] == "red" and choices[2]=="start fishing" and choices[3]=="ready":
 			storytext = "Wow it has been a productive day, I got dressed into a red hat and caught a big orange fish! Now I am tired and ready to go to sleep."
@@ -286,6 +303,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl="https://s7d2.turboimg.net/t1/52391985_penguin_tophat_red_fishing_fish.jpg"
+			audio = "/static/DressedRedTired.mp3"
 
 		elif choices[0]=="go fishing" and choices[1] == "ready" and choices[2]=="go swimming" and choices[3]=="jump":
 			storytext = "SPLASH! Now we can explore underwater. I can either choose a friend to visit or go to sleep."
@@ -297,6 +315,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:none"
 			pictureUrl = "https://s7d5.turboimg.net/t1/52388334_penguin_swim.jpg"
+			audio = "/static/FishingReadySwimmingJump.mp3"
 
 
 		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[3]=="make cake":
@@ -307,6 +326,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d8.turboimg.net/t1/52391942_penguin_swim_cake.jpg"
+			audio = "/static/MakeCake.mp3"
 
 		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[3]=="buy cake":
 			storytext = "Thank you Colby for making this wonderful cake. Now it is time to deliver the cake to Fiona and celebrate her birthday!"
@@ -316,6 +336,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d8.turboimg.net/t1/52391944_penguin_swim_crab_cake.jpg"
+			audio = "/static/ColbyCake.mp3"
 
 		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Fiona" and choices[3]=="Willy":
 			storytext = "Whale hello there Willy! Haha get it :) I just wanted to come say hi before I swim back home and Fiona followed along."
@@ -325,6 +346,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d6.turboimg.net/t1/52392171_penguin_swim_whale_fish.jpg"
+			audio = "/static/WhaleHello.mp3"
 
 		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Fiona" and choices[3]=="Colby":
 			storytext = "Hi Colby, hope we didn't wake you up! We just wanted to come say hi before I swim back home."
@@ -334,15 +356,17 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d8.turboimg.net/t1/52391945_penguin_swim_crab_fish.jpg"
+			audio = "/static/WakeColbyUp.mp3"
 
 		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Fiona" and choices[3]=="Tom":
-			storytext = "Hi Tom, thank you for popping you head out of your shell to say hi! It is getting late, so I must swim back home."
+			storytext = "Hi Tom, thank you for popping your head out of your shell to say hi! It is getting late, so I must swim back home."
 			question = "Enter: goodnight"
 			opt1 = "goodnight"
 			options3Display = "display:none"
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d2.turboimg.net/t1/52398139_penguin_swim_crab_fish_turtle.jpg"
+			audio = "/static/HiTom.mp3"
 
 		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Colby" and choices[3]=="celebrate":
 			storytext = "Lets sing happy birthday to Fiona! All this partying has been really fun, but now I am tired and must go home to sleep."
@@ -352,6 +376,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d7.turboimg.net/t1/52397544_penguin_swim_crab_fish_cake.jpg"
+			audio = "/static/HappyBirthdayFiona.mp3"
 
 	if len(choices)==5:
 		if choices[0]=="go fishing" and choices[1] == "ready" and choices[2]=="go swimming" and choices[3]=="jump" and choices[4]=="Willy":
@@ -362,6 +387,7 @@ def story2_conditions(choices):
 				options2Display = "display:none"
 				options1Display = "display:inline"
 				pictureUrl = "https://s7d8.turboimg.net/t1/52391952_penguin_swim_whale.jpg"
+				audio = "/static/WillyGoodnight.mp3"
 
 		elif choices[0]=="go fishing" and choices[1] == "ready" and choices[2]=="go swimming" and choices[3]=="jump" and choices[4]=="Colby":
 				storytext = "Hi Colby! I never realized how soft the sand is down here. No wonder you love living on the ocean floor! Swimming took a lot of energy, so I am going to go home and sleep."
@@ -371,6 +397,7 @@ def story2_conditions(choices):
 				options2Display = "display:none"
 				options1Display = "display:inline"
 				pictureUrl = "https://s7d8.turboimg.net/t1/52391946_penguin_swim_crab_touch_botton.jpg"
+				audio = "/static/ColbyGoodnight.mp3"
 
 		elif choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[3]=="make cake" or choices[3]=="buy cake" and choices[4]=="celebrate":
 			storytext = "Hi Fiona, I made a cake for you! Should I make a banner that says happy birthday, say happy birthday, or sing happy birthday to Fiona?"
@@ -382,6 +409,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:none"
 			pictureUrl = "https://s7d5.turboimg.net/t1/52392168_penguin_swim_fish_cake_bubbles.jpg"
+			audio = "/static/HiFiona.mp3"
 
 	if len(choices)==6:
 		if choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[4]=="celebrate" and choices[5]=="make banner" and choices[3]=="make cake" or choices[3]=="buy cake":
@@ -392,6 +420,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d5.turboimg.net/t1/52398144_penguin_swim_fish_cake_banner.jpg"
+			audio = "/static/BirthdayBanner.mp3"
 
 		if choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[4]=="celebrate" and choices[5]=="say" and choices[3]=="make cake" or choices[3]=="buy cake":
 			storytext = "This has been a really fun birthday party, but it is getting late so I must swim home. Enjoy your cake!"
@@ -401,6 +430,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d8.turboimg.net/t1/52391950_penguin_swim_fish_cake_exclaim.jpg"
+			audio = "/static/EnjoyYourCake.mp3"
 
 		if choices[0] == "go swimming" and choices[1]=="jump" and choices[2]=="Willy" and choices[4]=="celebrate" and choices[5]=="sing" and choices[3]=="make cake" or choices[3]=="buy cake":
 			storytext = "This has been a really fun birthday party, but it is getting late so I must swim home. Enjoy your cake!"
@@ -410,6 +440,7 @@ def story2_conditions(choices):
 			options2Display = "display:none"
 			options1Display = "display:inline"
 			pictureUrl = "https://s7d8.turboimg.net/t1/52391951_penguin_swim_fish_cake_sing.jpg"
+			audio = "/static/HappyBirthdaySong.mp3"
 
 	if "goodnight" in choices:
 		storytext = "What a fun day! Now it is time to go to sleep, goodnight!"
@@ -418,6 +449,7 @@ def story2_conditions(choices):
 		options2Display = "display:none"
 		options1Display = "display:none"
 		pictureUrl="https://s7d5.turboimg.net/t1/52388330_penguin_goodnight.jpg"
+		audio = "/static/Goodnight.mp3"
 
 
 	if options3Display=="display:inline":

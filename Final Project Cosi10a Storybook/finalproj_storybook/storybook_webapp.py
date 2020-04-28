@@ -96,7 +96,7 @@ def story2start():
 	question = "Enter: go swimming or go fishing or get dressed"
 	pictureUrl = "https://s7d5.turboimg.net/t1/52388300_penguin_iceberg.jpg"
 	state['story2_choices'] = []
-	audio = "/static/story2start.mp3"
+	audio = "/static/Story2StartML.mp3"
 
 	return render_template("story2.html", storytext=storytext, picUrl=pictureUrl, question=question, opt1="go swimming", opt2="go fishing", opt3="get dressed",
 	options3Display="display:inline",
