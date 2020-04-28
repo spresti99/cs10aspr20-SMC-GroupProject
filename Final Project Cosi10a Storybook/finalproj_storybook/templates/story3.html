@@ -1,13 +1,58 @@
 #story3
 
 
-
 {% extends "fancylayout.html" %}
 
 {% block content %}
-  <div class="jumbotron">
-    <h1>Story Number 3</h1>
-  </div>
-  <p style="font-size:20px">Here is your story</p>
+
+<div class="jumbotron">
+  <h1>Feed the Panda</h1>
+</div>
+
+<p style="font-size:20px">Feed the panda by dragging the bamboo to the box closest to the panda.</p>
+
+<html>
+<head>
+<style>
+#div1, #div2 {
+  float: left;
+  width: 120px;
+  height: 230px;
+  margin: 10px;
+  padding: 10px;
+  border: 5px solid black;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="https://s7d6.turboimg.net/t1/52426049_bamboo.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="200">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+
+<br>
+</html>
+
+<br>
+<img src="https://s7d5.turboimg.net/t1/52426031_panda.jpg" width="208" height="177">
 
 {% endblock %}
