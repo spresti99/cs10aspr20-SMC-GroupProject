@@ -153,6 +153,10 @@ def story2():
 def story3():
 	return render_template('story3.html')
 
+@app.route('/tiger')
+def tiger():
+	return render_template('story3.tiger.html')
+
 @app.route('/about_authors')
 def about_authors():
 	""" generates a bio page with links and images """
