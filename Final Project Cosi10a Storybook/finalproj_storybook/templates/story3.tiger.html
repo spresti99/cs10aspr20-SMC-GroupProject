@@ -1,0 +1,64 @@
+#story3 panda
+
+
+{% extends "fancylayout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <h1>Feed the Animals</h1>
+</div>
+
+<p style="font-size:20px">Feed the tiger by dragging the meat to the box closest to the tiger.</p>
+
+<html>
+<head>
+<style>
+#div1, #div2 {
+  float: left;
+  width: 170px;
+  height: 170px;
+  margin: 10px;
+  padding: 10px;
+  border: 5px solid black;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="https://previews.123rf.com/images/lineartestpilot/lineartestpilot1802/lineartestpilot180223531/95069801-cooked-cartoon-leg-of-meat.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="150" height="150">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+
+<br>
+</html>
+
+<br>
+<img src="https://i.pinimg.com/originals/24/01/e3/2401e38f74baedab604de7e196515ff1.png" width="208" height="177">
+<br>
+<a href="/story3"
+    class="btn btn-lg btn-danger">
+  Next animal
+</a>
+<br>
+
+{% endblock %}
