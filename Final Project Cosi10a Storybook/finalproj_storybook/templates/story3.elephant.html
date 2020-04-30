@@ -1,0 +1,92 @@
+#story3 scrub elephant
+
+
+{% extends "fancylayout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <h1>Zookeeper</h1>
+</div>
+
+<p style="font-size:20px">Scrub the elephant clean by dragging the brush over the elephant, remember to put the brush away when you are done!</p>
+
+<img src="https://static.vecteezy.com/system/resources/previews/000/648/320/original/vector-cute-baby-elephant-cartoon.jpg" width="370" height="370">
+
+<html>
+<head>
+<style>
+#div1 {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+  border: 5px solid black;
+}
+</style>
+
+<style>
+#div2 {
+  float: right;
+  width: 575px;
+  height: 400px;
+  margin: 20px;
+  padding: 10px;
+}
+</style>
+
+<style>
+#div3 {
+  float: right;
+  width: 320px;
+  height: 400px;
+  margin: 20px;
+  padding: 10px;
+}
+</style>
+
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+
+</script>
+</head>
+<body>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="https://previews.123rf.com/images/lineartestpilot/lineartestpilot1802/lineartestpilot180273134/95545824-cartoon-scrubbing-brush.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="70" height="70">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+
+</body>
+
+<br>
+</html>
+
+<br>
+
+
+<br>
+<a href="/seal"
+    class="btn btn-lg btn-danger">
+  Next animal
+</a>
+<br>
+
+{% endblock %}

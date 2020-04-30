@@ -1,0 +1,86 @@
+#story3 panda
+
+
+{% extends "fancylayout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <h1>Zookeeper</h1>
+</div>
+
+<p style="font-size:20px">Teach the seal how to balance a ball on his nose by dragging the cicus ball just above his nose. You may have to try a couple times to position the ball just right so that it balances!</p>
+
+<html>
+<head>
+<style>
+#div1 {
+  float: left;
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  padding: 10px;
+}
+</style>
+<p>        </p>
+<style>
+#div2 {
+  float: left;
+  width: 120px;
+  height: 120px;
+  margin: 40px;
+  padding: 55px;
+}
+</style>
+
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="https://cdn.clipart.email/efc3e3821d91745afa3a1797f7657266_pink-ball-clip-art-at-clkercom-vector-clip-art-online-royalty-_600-600.png" draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="100">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+
+<br>
+</html>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<img src="https://www.publicdomainpictures.net/pictures/200000/t2/plain-white-background-1480544970glP.jpg" width="280" height="177">
+<img src="https://s7d2.turboimg.net/t1/52481633_seal.jpg" width="208" height="177">
+<br>
+<br>
+<a href="/story3"
+    class="btn btn-lg btn-danger">
+  Next animal
+</a>
+{% endblock %}
