@@ -153,9 +153,21 @@ def story2():
 def story3():
 	return render_template('story3.html')
 
+@app.route('/panda')
+def panda():
+	return render_template('story3.panda.html')
+
 @app.route('/tiger')
 def tiger():
 	return render_template('story3.tiger.html')
+
+@app.route('/elephant')
+def elephant():
+	return render_template('story3.elephant.html')
+
+@app.route('/seal')
+def seal():
+	return render_template('story3.seal.html')
 
 @app.route('/about_authors')
 def about_authors():
@@ -179,8 +191,14 @@ def charisma():
 
 @app.route('/about')
 def about():
-	"""generates an about page with information about the game"""
+	"""generates an about page with information about the storybook"""
 	return render_template('about.html')
+
+@app.route('/conditionals')
+def conditionals():
+	"""generate test page for the creaters of the website to test their code"""
+	yes = ['p','a']
+	return render_template('html_conditionals.html', yes=yes)
 
 if __name__ == '__main__':
 	app.run(port=3000)
