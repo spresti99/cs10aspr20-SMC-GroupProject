@@ -35,6 +35,7 @@ def split(word):
 
 def welcome(name):
 	global state
+	state['message']=""
 	newName = split(name)
 	for y in range(0, len(newName)):
 		if newName[y] == 'a' or newName[y] == 'A':
