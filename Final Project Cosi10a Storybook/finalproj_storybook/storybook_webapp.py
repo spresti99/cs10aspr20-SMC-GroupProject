@@ -208,5 +208,10 @@ def conditionals():
 	yes = ['p','a']
 	return render_template('html_conditionals.html', yes=yes)
 
+@app.route('/story4')
+def story4():
+	"""generate test page for potential story 4"""
+	return render_template('story4.html')
+
 if __name__ == '__main__':
 	app.run(port=3000)
