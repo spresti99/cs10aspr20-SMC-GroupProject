@@ -169,6 +169,14 @@ def elephant():
 def seal():
 	return render_template('story3.seal.html')
 
+@app.route('/lion')
+def lion():
+	return render_template('story3.lion.html')
+
+@app.route('/birds')
+def birds():
+	return render_template('story3.birds.html')
+
 @app.route('/about_authors')
 def about_authors():
 	""" generates a bio page with links and images """
