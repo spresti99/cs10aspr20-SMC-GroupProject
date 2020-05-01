@@ -1,0 +1,99 @@
+#story 4
+
+{% extends "fancylayout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <h1>The Human Body</h1>
+</div>
+
+<body>
+  <script>
+  function stomach(){
+       var audio = document.getElementById("stomach");
+       audio.play();
+                 }
+  function leg(){
+        var audio = document.getElementById("leg");
+        audio.play();
+                 }
+  function hand(){
+        var audio = document.getElementById("hand");
+        audio.play();
+                 }
+  function foot(){
+        var audio = document.getElementById("foot");
+        audio.play();
+                 }
+  function head1(){
+        var audio = document.getElementById("head1");
+        audio.play();
+                 }
+  function arm(){
+        var audio = document.getElementById("arm");
+        audio.play();
+                 }
+  function shoulder(){
+        var audio = document.getElementById("shoulder");
+        audio.play();
+                 }
+  function chest(){
+        var audio = document.getElementById("chest");
+        audio.play();
+                 }
+   </script>
+<p style="font-size:20px">Click on a body part to hear its name!</p>
+
+<map name="body_map">
+
+ <area shape="circle" coords="71,265,25" onclick="hand()">
+ <audio id="hand" src="/static/hand.mp3" ></audio>
+
+ <area shape="circle" coords="233,265,25" onclick="hand()">
+ <audio id="hand" src="/static/hand.mp3" ></audio>
+
+ <area shape="rect" coords="119,196,183,255" onclick="stomach()">
+ <audio id="stomach" src="/static/stomach.mp3" ></audio>
+
+ <area shape="rect" coords="121,316,182,400" onclick="leg()">
+ <audio id="leg" src="/static/leg.mp3" ></audio>
+
+ <area shape="rect" coords="83,405,222,436" onclick="foot()">
+ <audio id="foot" src="/static/foot.mp3" ></audio>
+
+ <area shape="circle" coords="149,88,50" onclick="head1()">
+ <audio id="head1" src="/static/head.mp3" ></audio>
+
+ <area shape="rect" coords="67,170,109,241" onclick="arm()">
+ <audio id="arm" src="/static/arm.mp3" ></audio>
+
+ <area shape="rect" coords="188,180,236,237" onclick="arm()">
+ <audio id="arm" src="/static/arm.mp3" ></audio>
+
+ <area shape="circle" coords="115,150,17" onclick="shoulder()">
+ <audio id="shoulder" src="/static/shoulder.mp3" ></audio>
+
+ <area shape="circle" coords="187,147,17" onclick="shoulder()">
+ <audio id="shoulder" src="/static/shoulder.mp3" ></audio>
+
+ <area shape="rect" coords="133,140,170,200" onclick="chest()">
+ <audio id="chest" src="/static/chest.mp3" ></audio>
+
+
+</map>
+
+<figure style="text-align:center;">
+
+    <img usemap="#body_map" src="https://s7d8.turboimg.net/t1/52636946_boy.jpg" width="318" height="450" />
+
+    <figcaption>Body Map</figcaption>
+
+
+
+</figure>
+
+  </body>
+
+
+{% endblock %}
