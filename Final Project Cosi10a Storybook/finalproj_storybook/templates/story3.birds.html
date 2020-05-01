@@ -1,0 +1,55 @@
+#story3 birds
+
+
+{% extends "fancylayout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <h1>Zookeeper</h1>
+</div>
+
+<p style="font-size:20px">Make music with the birds by listening to them sing and playing instruments. Click either a bird or an instrument to hear its sound. Try playing multiple sounds at the same time!</p>
+<audio controls>
+  <source src=/static/birds.mp3 type="audio/mp3">
+  <p>Your browser doesn't support HTML5 audio.</p>
+</audio>
+<br>
+
+<body>
+  <script>
+  function green(){
+       var audio = document.getElementById("green");
+       audio.play();
+                 }
+  function red(){
+        var audio = document.getElementById("red");
+        audio.play();
+                 }
+  function drum(){
+        var audio = document.getElementById("drum");
+        audio.play();
+                 }
+   </script>
+<br>
+<img src="https://s7d8.turboimg.net/t1/52629692_bird.jpg"  onclick="green()" width="200" height="200">
+<audio id="green" src="/static/canary.wav" ></audio>
+
+<img src="https://s7d8.turboimg.net/t1/52629694_red_bird.jpg"  onclick="red()" width="200" height="200">
+<audio id="red" src="/static/RedParot.wav" ></audio>
+
+<img src="https://s7d7.turboimg.net/t1/52631296_drum.jpg"  onclick="drum()" width="200" height="200">
+<audio id="drum" src="/static/bassdrum.wav" ></audio>
+
+  </body>
+
+<br>
+<br>
+<br>
+
+<a href="/story3"
+    class="btn btn-lg btn-danger">
+  Back to Zookeeper
+</a>
+
+{% endblock %}

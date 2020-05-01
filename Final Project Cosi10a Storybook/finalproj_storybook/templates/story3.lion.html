@@ -1,0 +1,46 @@
+#story3 lion
+
+
+{% extends "fancylayout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <h1>Zookeeper</h1>
+</div>
+
+<p style="font-size:20px">Hear the lion roar by clicking on the lion.</p>
+<audio controls>
+  <source src=/static/lion.mp3 type="audio/mp3">
+  <p>Your browser doesn't support HTML5 audio.</p>
+</audio>
+<br>
+
+<body>
+
+  <script>
+  function play(){
+       var audio = document.getElementById("audio");
+       audio.play();
+                 }
+   </script>
+<br>
+<img src="https://i.ya-webdesign.com/images/safari-animals-png-7.png" value="PLAY"  onclick="play()" width="200" height="200">
+<audio id="audio" src="/static/lionroar.wav" ></audio>
+ </body>
+
+<br>
+<br>
+<br>
+
+<a href="/story3"
+    class="btn btn-lg btn-danger">
+  Back to Zookeeper
+</a>
+
+<a href="/birds"
+    class="btn btn-lg btn-danger">
+  Next animal
+</a>
+
+{% endblock %}
