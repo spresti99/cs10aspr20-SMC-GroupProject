@@ -178,6 +178,10 @@ def lion():
 def birds():
 	return render_template('story3.birds.html')
 
+@app.route('/fish')
+def fish():
+	return render_template('story3.fish.html')
+
 @app.route('/about_authors')
 def about_authors():
 	""" generates a bio page with links and images """
